@@ -4,7 +4,7 @@ const axios = require('axios');
 const app = express();
 app.use(express.json());
 
-const GAS_URL = 'https://script.google.com/macros/s/XXXXXX/exec';
+const GAS_URL = process.env.GAS_URL;
 
 app.post('/webhook', async (req, res) => {
   try {
